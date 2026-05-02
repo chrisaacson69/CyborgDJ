@@ -1,0 +1,291 @@
+{
+  "name": "DJ Set 1 — Progressive/Trance Mix",
+  "description": "11-track set, BPM staircase 120-129, texture-over-harmony philosophy",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/dj-set-1-mix.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Martin Roth — Deep Style (Original Mix)",
+      "file": "Martin Roth - Deep Style (Original Mix).mp3",
+      "original_bpm": 120.19,
+      "target_bpm": 123.05,
+      "first_beat_sample": 8687,
+      "cue_in_bar": 63,
+      "cue_out_bar": 207,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Opener. Inizio=0.197s, phase=2. Cue in at bar 63 (KEY 2A>>12A at 64). Last key change at 199, trailer to 207, noise after 223."
+    },
+    {
+      "id": 2,
+      "name": "Marsh feat. Mimi Page — Foss",
+      "file": "Marsh feat. Mimi Page - Foss (Official Music Video).mp3",
+      "original_bpm": 123.05,
+      "target_bpm": 123.05,
+      "first_beat_sample": 647697,
+      "cue_in_bar": 0,
+      "cue_out_bar": 165,
+      "gain_db": 0,
+      "rb_offset": 6,
+      "notes": "No stretch needed. Inizio=14.687s, phase=3. RB bars are engine-6. Opens quietly in 6A. Bass drops ~130, past meaty bits ~139, dead by 147, tail to 165."
+    },
+    {
+      "id": 3,
+      "name": "Alone (Extended Mix)",
+      "file": "Alone (Extended Mix).mp3",
+      "original_bpm": 123.05,
+      "target_bpm": 123.05,
+      "first_beat_sample": 22006,
+      "cue_in_bar": 48,
+      "cue_out_bar": 199.75,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Inizio=0.499s, phase=2. Bar 48 = breakdown/texture change (energy drop, key 9B). First drop at 80. Bar 200 = last key change, out at 201. Key: 6A (0-35), 4A (36-47), 9B (48-67), 6A (68+)."
+    },
+    {
+      "id": 4,
+      "name": "Kasablanca — Am I Dreaming?",
+      "file": "Kasablanca - Am I Dreaming\uff1f (@Kasablanca).mp3",
+      "original_bpm": 126.05,
+      "target_bpm": 126.05,
+      "first_beat_sample": 338933,
+      "cue_in_bar": 7,
+      "cue_out_bar": 109,
+      "gain_db": 0,
+      "rb_offset": 3,
+      "notes": "Inizio=7.686s, phase=3. Lyric at RB bar 4 = engine bar 7. Short track. Content ends ~RB 105 (engine 108), 1-bar outro to 109."
+    },
+    {
+      "id": 5,
+      "name": "Orbital — Otoño",
+      "file": "Orbital - Oto\u00f1o.mp3",
+      "original_bpm": 126.05,
+      "target_bpm": 126.05,
+      "first_beat_sample": 8203,
+      "cue_in_bar": 1,
+      "cue_out_bar": 181,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Inizio=0.186s, phase=0. Bars 0-8 intro (odd but useful for overlap). Main from bar 9. Finale ~154, winds down to 178-181, dead after."
+    },
+    {
+      "id": 6,
+      "name": "Simon Doty — Lady Danger (Extended Mix)",
+      "file": "Simon Doty - Lady Danger (Extended Mix).mp3",
+      "original_bpm": 128.0,
+      "target_bpm": 128.0,
+      "first_beat_sample": 38410,
+      "cue_in_bar": 32,
+      "cue_out_bar": 240,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Inizio=0.871s, phase=1. True BPM=128.0. 240 bars total. Skip 32-bar intro, enter at fill (32-33). Outro from ~224. Key: 2A (29-72), 3A (73-96), 2A (97+)."
+    },
+    {
+      "id": 7,
+      "name": "You Are Sleeping (PQM Meets Luke Chable Vocal Pass)",
+      "file": "You Are Sleeping (PQM Meets Luke Chable Vocal Pass).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 83437,
+      "cue_in_bar": 65,
+      "cue_out_bar": 289,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Inizio=1.892s, phase=1. Enter at bar 65 (1A melodic section). Outro from 178 (long offramp). Vocal callbacks: 208, 225, 247 (after quiet 241), 269. Dead by 272. Must be out by 289."
+    },
+    {
+      "id": 8,
+      "name": "Quivver — Brothers & Sisters (Original Mix)",
+      "file": "Quivver - Brothers & Sisters (Original Mix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 73735,
+      "cue_in_bar": 0,
+      "cue_out_bar": 237,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Inizio=1.672s, phase=3. 1A->1A perfect harmonic match with You Are Sleeping. Beat section 226-237, melody ends ~226."
+    },
+    {
+      "id": 9,
+      "name": "Below The Belt (Chris Micali Remix)",
+      "file": "Below The Belt (Chris Micali Remix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 8688,
+      "cue_in_bar": 17,
+      "cue_out_bar": 241,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Inizio=0.197s, phase=0. Beat section 17-33. Wind-down event at 241. Melodic bass clashes with Quivver. Basslines fight despite rhythmic alignment."
+    },
+    {
+      "id": 10,
+      "name": "Ronski Speed & Syntrobic feat. Renee Stahl — Pink Skye",
+      "file": "Ronski Speed & Syntrobic feat. Renee Stahl-Pink Skye.mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 20992,
+      "cue_in_bar": 29,
+      "cue_out_bar": 185,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Inizio=0.476s, phase=1. Enter at bar 29 (fill at 32 = distraction anchor). 9A throughout intro."
+    },
+    {
+      "id": 11,
+      "name": "LTN — Daylight (Original Mix)",
+      "file": "LTN - Daylight (Original Mix) [Enhanced Progressive].mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 126964,
+      "cue_in_bar": 0,
+      "cue_out_bar": 207,
+      "gain_db": 0,
+      "rb_offset": 1,
+      "notes": "Inizio=2.879s, phase=3. Closer. 9A->8B comfortable overlap."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 8,
+      "fade_type": "exp",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "notes": "Deep Style bars 199-207 overlap with Foss bars 0-8 (pre-Inizio hum). Deep Style out by Foss RB bar 2 (engine bar ~8). Exp fade keeps both tracks fuller during overlap."
+    },
+    {
+      "from_track": 2,
+      "to_track": 3,
+      "type": "crossfade",
+      "overlap_bars": 6,
+      "fade_type": "exp",
+      "eq_outgoing": null,
+      "eq_incoming": [
+        {"type": "lowpass", "frequency": 800}
+      ],
+      "eq_incoming_ramp": true,
+      "eq_ramp_power": 0.33,
+      "notes": "Mood transition. Foss full run to 165 — 20 bars quiet tail. LP 800 on Alone with exp ramp (power=3) — synth stays tamed early, opens up late. No sudden pop."
+    },
+    {
+      "from_track": 3,
+      "to_track": 4,
+      "type": "clean_cut",
+      "notes": "BPM jump 123->126. Alone rides 9B outro to silence, Am I Dreaming vocal resets."
+    },
+    {
+      "from_track": 4,
+      "to_track": 5,
+      "type": "crossfade",
+      "overlap_bars": 14.75,
+      "fade_type": "equal_power",
+      "outgoing_hold": true,
+      "eq_outgoing": null,
+      "eq_incoming": [
+        {"type": "lowpass", "frequency": 500}
+      ],
+      "eq_incoming_ramp": true,
+      "eq_ramp_power": 0.33,
+      "notes": "Both 126 BPM. 7A->4B. Outgoing hold: kasa vocals at full volume, Otoño LP 500 ramp builds underneath. Slam cut at Otoño bar 15.75 (drums). Alt: 8.25 for longer transition feel."
+    },
+    {
+      "from_track": 5,
+      "to_track": 6,
+      "type": "crossfade",
+      "overlap_bars": 8,
+      "fade_type": "exp",
+      "fade_power": 6,
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "eq_3band_incoming": {
+        "low": [0.0, 1.0],
+        "mid": [0.2, 1.0],
+        "high": [0.5, 1.0]
+      },
+      "tempo_ramp": {
+        "start_bpm": 126.05,
+        "end_bpm": 128.0,
+        "step_bars": 2,
+        "ramp_bars": 16
+      },
+      "notes": "4B->2A. 16-bar ramp (8 solo on Otoño, 8-bar crossfade). 3-band on LD: kill bass, tame mids, partial highs — ramp all to full. Exp fade power=6."
+    },
+    {
+      "from_track": 6,
+      "to_track": 7,
+      "type": "crossfade",
+      "overlap_bars": 17,
+      "fade_type": "equal_power",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "eq_3band_outgoing": {
+        "low": [1.0, 0.0],
+        "mid": [1.0, 0.0],
+        "high": [1.0, 0.0],
+        "power": 3
+      },
+      "tempo_ramp": {
+        "start_bpm": 128.0,
+        "end_bpm": 129.2,
+        "step_bars": 2
+      },
+      "notes": "Percussive bridge. 2A->1A (perfect neighbor). Tempo ramp 128->129.2 over 17 bars. 3-band on LD outgoing: power=3 delayed rolloff — stays full through midpoint, then drops mids/highs fast to clear for Sleeping vocals."
+    },
+    {
+      "from_track": 7,
+      "to_track": 8,
+      "type": "crossfade",
+      "overlap_bars": 80,
+      "fade_type": "equal_power",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "automation": {
+        "outgoing": [[0, 1.0], [20, 0.9], [30, 0.85], [38, 0.8], [42, 0.5], [48, 0.2], [56, 0.1], [66, 0.05], [70, 0.0], [80, 0.0]],
+        "incoming": [[0, 0.0], [20, 0.2], [30, 0.05], [38, 0.05], [40, 0.4], [42, 0.6], [48, 0.85], [56, 0.95], [66, 1.0], [70, 1.0], [80, 1.0]]
+      },
+      "notes": "1A->1A perfect harmonic match. 80-bar fader automation. PQM vocal callback at bar 38(247) is the distraction anchor — Quivver slides in during vocal, established by the time it ends. Mute Quivver during PQM quiet zone (30-38)."
+    },
+    {
+      "from_track": 8,
+      "to_track": 9,
+      "type": "crossfade",
+      "overlap_bars": 2,
+      "fade_type": "s_curve",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "notes": "1A->1A but basslines clash despite rhythmic alignment. Quivver cue_out=237 (beat section end), BTB cue_in=17 (beat section start). 2-bar softener — NEEDS PRO FEEDBACK. Kicks align but melodic bass creates ghost beats in any longer overlap."
+    },
+    {
+      "from_track": 9,
+      "to_track": 10,
+      "type": "crossfade",
+      "overlap_bars": 4,
+      "fade_type": "s_curve",
+      "eq_outgoing": [
+        {"type": "highpass", "frequency": 500}
+      ],
+      "eq_incoming": null,
+      "notes": "HARD transition (1A->9A, 4 Camelot steps). Distraction anchor: PS enters at bar 29, fill at 32 (perc drop 70%) masks key change. BTB exits at 241 (wind-down). HP 500 on BTB outgoing."
+    },
+    {
+      "from_track": 10,
+      "to_track": 11,
+      "type": "crossfade",
+      "overlap_bars": 19,
+      "fade_type": "equal_power",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "overlap_gain_hump_db": 3.5,
+      "notes": "9A->8B, 6/7 shared notes. Comfortable overlap. Sin-curve gain hump +3.5dB at midpoint compensates equal_power volume dip — measured flat to -0.3dB."
+    }
+  ]
+}

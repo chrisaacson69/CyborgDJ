@@ -1,0 +1,62 @@
+{
+  "name": "Flip of the Coin → Quicksilver — v5 (drum swap with per-band lanes)",
+  "description": "v5: Per-band automation. QS mids/highs blend in early over Flip's drums. QS bass/kicks held at zero. At the swap point, Flip drums die and QS drums take over. Phase-aligned.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/flip-quicksilver-v5.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Flip of the Coin (Extended Mix)",
+      "file": "Flip of the Coin (Extended Mix).mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 22528,
+      "cue_in_bar": 192,
+      "cue_out_bar": 206,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "4A (F minor). Bars 192-206: drum-heavy outro winding down."
+    },
+    {
+      "id": 2,
+      "name": "Quicksilver",
+      "file": "Quicksilver.mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 37616,
+      "cue_in_bar": 48,
+      "cue_out_bar": 104,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "3A (Bb minor). Phase-aligned (+4336). Bar 48 = still full energy, 54 = bridge, 56 = drums resume, 64 = breakdown, 80 = DROP."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 8,
+      "fade_type": "equal_power",
+      "automation": {
+        "low_freq": 200,
+        "high_freq": 2500,
+
+        "outgoing_low":  [[0, 1.0], [4, 1.0], [5, 0.5], [6, 0.1], [7, 0.0], [8, 0.0]],
+        "outgoing_mid":  [[0, 1.0], [4, 0.8], [6, 0.4], [8, 0.0]],
+        "outgoing_high": [[0, 1.0], [4, 0.7], [6, 0.3], [8, 0.0]],
+
+        "incoming_low":  [[0, 0.0], [4, 0.0], [5, 0.3], [6, 0.7], [7, 1.0], [8, 1.0]],
+        "incoming_mid":  [[0, 0.0], [2, 0.0], [3, 0.15], [4, 0.4], [6, 0.8], [8, 1.0]],
+        "incoming_high": [[0, 0.0], [2, 0.05], [3, 0.2], [4, 0.5], [6, 0.85], [8, 1.0]],
+
+        "outgoing": [[0, 1.0], [4, 0.9], [6, 0.5], [8, 0.0]],
+        "incoming": [[0, 0.0], [2, 0.3], [4, 0.6], [6, 0.85], [8, 1.0]]
+      },
+      "notes": "v5: 8-bar overlap (Flip 198-206 / QS 48-56). Per-band drum swap: QS highs/mids blend in early (bars 0-4) over Flip's drums. QS bass held at ZERO for first 4 bars — no drum conflict. At bar 5: Flip bass drops, QS bass rises. By bar 7: drum swap complete. QS bridge moment at bar 54 (~overlap bar 6) catches the handoff naturally."
+    }
+  ]
+}

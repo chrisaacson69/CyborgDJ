@@ -1,0 +1,62 @@
+{
+  "name": "Flip of the Coin → Quicksilver — v7 (drums-only → vocals)",
+  "description": "v7: Flip drums-only outro (bar 193) → 4-bar drum swap → QS vocals at bar 97. Skips all of QS's long intro/buildup. Rekordbox-calibrated bar numbers. QS plays 97-217 (vocals section only).",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/flip-quicksilver-v7.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Flip of the Coin (Extended Mix)",
+      "file": "Flip of the Coin (Extended Mix).mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 22528,
+      "cue_in_bar": 184,
+      "cue_out_bar": 197,
+      "gain_db": 0,
+      "rb_offset": 1,
+      "notes": "4A (F minor). Full energy at 184 (rms 0.326). Bar 192 (RB 193) = drums-only. rb_offset=1 (RB bar = librosa bar + 1)."
+    },
+    {
+      "id": 2,
+      "name": "Quicksilver",
+      "file": "Quicksilver.mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 37616,
+      "cue_in_bar": 93,
+      "cue_out_bar": 217,
+      "gain_db": 0,
+      "rb_offset": 1,
+      "notes": "3A (Bb minor). Phase-aligned. Bar 96 (RB 97) = vocals start. Bar 216 (RB 217) = end of vocals. rb_offset=1 (RB bar = librosa bar + 1). Playing the meat of the track only."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 4,
+      "fade_type": "equal_power",
+      "automation": {
+        "low_freq": 200,
+        "high_freq": 2500,
+
+        "outgoing_low":  [[0, 1.0], [2, 1.0], [3, 0.3], [4, 0.0]],
+        "outgoing_mid":  [[0, 1.0], [2, 0.6], [3, 0.2], [4, 0.0]],
+        "outgoing_high": [[0, 1.0], [2, 0.5], [3, 0.15], [4, 0.0]],
+
+        "incoming_low":  [[0, 0.0], [2, 0.0], [3, 0.7], [4, 1.0]],
+        "incoming_mid":  [[0, 0.0], [1, 0.3], [2, 0.7], [3, 0.9], [4, 1.0]],
+        "incoming_high": [[0, 0.0], [1, 0.4], [2, 0.8], [3, 0.95], [4, 1.0]],
+
+        "outgoing": [[0, 1.0], [2, 0.7], [3, 0.3], [4, 0.0]],
+        "incoming": [[0, 0.0], [1, 0.3], [2, 0.7], [3, 0.9], [4, 1.0]]
+      },
+      "notes": "v7: 4-bar overlap at Flip 193-197 / QS 93-97. Flip drums-only section → QS mids/highs blend in (bars 0-2) → drum swap at bars 2-3 → QS vocals arrive at bar 97 with full energy. No quiet space. Key: 4A→3A adjacent Camelot."
+    }
+  ]
+}

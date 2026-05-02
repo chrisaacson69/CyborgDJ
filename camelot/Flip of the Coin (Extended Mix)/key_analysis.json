@@ -1,0 +1,1616 @@
+{
+  "youtube": {},
+  "audio": {
+    "path": "../music/Flip of the Coin (Extended Mix).mp3",
+    "sr": 22050,
+    "mono": true,
+    "harmonic_only": true
+  },
+  "bpm_detection": {
+    "bpm": 123.047,
+    "bpm_librosa": 123.047,
+    "bpm_confidence": 0.909,
+    "detected_from": "30.0-90.0s",
+    "beat_count": 98,
+    "first_downbeat": 30.5341,
+    "first_downbeat_idx": 0,
+    "downbeat_method": "extrapolation",
+    "downbeat_confidence": 0.0,
+    "tempo_stable": true,
+    "tempo_changes": null,
+    "beat_intervals": {
+      "mean": 0.4917,
+      "std": 0.0088,
+      "min": 0.4876,
+      "max": 0.5108
+    }
+  },
+  "analysis": {
+    "type": "timeline",
+    "bpm": 123.047,
+    "bars_per_segment": 8,
+    "min_confidence": 0.05,
+    "min_stable_segments": 2,
+    "segment_method": "synthetic_bpm",
+    "downbeat_method": "extrapolation"
+  },
+  "estimate": {
+    "duration": 399.36,
+    "bpm": 123.047,
+    "bars_per_segment": 8,
+    "total_segments_analyzed": 26,
+    "segment_method": "synthetic_bpm",
+    "summary": {
+      "dominant": {
+        "key": "F minor",
+        "camelot": "4A",
+        "duration": 389.89,
+        "coverage": 0.976
+      },
+      "key_changes": [
+        {
+          "time": 389.895,
+          "bar": 200,
+          "from": "4A",
+          "to": "1A"
+        }
+      ],
+      "total_regions": 2,
+      "stable_regions": 1,
+      "mix_points": {
+        "intro": {
+          "time": 0.0,
+          "key": "F minor",
+          "camelot": "4A"
+        },
+        "outro": {
+          "time": 0.0,
+          "key": "F minor",
+          "camelot": "4A"
+        }
+      }
+    },
+    "timeline": [
+      {
+        "start": 0.0,
+        "end": 389.895,
+        "key": "F minor",
+        "camelot": "4A",
+        "type": "stable",
+        "confidence": {
+          "average": 0.458,
+          "max": 0.699
+        },
+        "score": 0.9511,
+        "segments_merged": 25,
+        "bar_start": 0,
+        "bar_end": 200
+      },
+      {
+        "start": 389.895,
+        "end": 399.357,
+        "key": "Ab minor",
+        "camelot": "1A",
+        "type": "transition",
+        "confidence": {
+          "average": 0.096,
+          "max": 0.096
+        },
+        "score": 0.9642,
+        "segments_merged": 1,
+        "bar_start": 200,
+        "bar_end": 208
+      }
+    ],
+    "energy_events": [
+      {
+        "time": 15.4185,
+        "bar": 8,
+        "types": [
+          "drums_increase"
+        ],
+        "rms_change": 0.002524,
+        "onset_change": 0.37,
+        "centroid_change": -209.3
+      },
+      {
+        "time": 31.0217,
+        "bar": 16,
+        "types": [
+          "drums_increase"
+        ],
+        "rms_change": 0.00238,
+        "onset_change": 0.51,
+        "centroid_change": -131.0
+      },
+      {
+        "time": 46.6249,
+        "bar": 24,
+        "types": [
+          "energy_increase",
+          "drums_increase",
+          "timbre_change"
+        ],
+        "rms_change": 0.045707,
+        "onset_change": 0.32,
+        "centroid_change": -270.1
+      },
+      {
+        "time": 77.8313,
+        "bar": 40,
+        "types": [
+          "energy_decrease",
+          "timbre_change"
+        ],
+        "rms_change": -0.040446,
+        "onset_change": -0.25,
+        "centroid_change": 264.2
+      },
+      {
+        "time": 93.4345,
+        "bar": 48,
+        "types": [
+          "texture_change"
+        ],
+        "rms_change": 0.025858,
+        "onset_change": 0.19,
+        "centroid_change": 119.3
+      },
+      {
+        "time": 109.0377,
+        "bar": 56,
+        "types": [
+          "energy_decrease",
+          "drums_decrease"
+        ],
+        "rms_change": -0.045181,
+        "onset_change": -0.58,
+        "centroid_change": -140.5
+      },
+      {
+        "time": 124.6409,
+        "bar": 64,
+        "types": [
+          "energy_increase",
+          "timbre_change",
+          "bass_increase"
+        ],
+        "rms_change": 0.061802,
+        "onset_change": -0.19,
+        "centroid_change": -293.4
+      },
+      {
+        "time": 140.2441,
+        "bar": 72,
+        "types": [
+          "drums_increase",
+          "texture_change"
+        ],
+        "rms_change": 0.022173,
+        "onset_change": 0.26,
+        "centroid_change": -156.0
+      },
+      {
+        "time": 155.8473,
+        "bar": 80,
+        "types": [
+          "drums_increase",
+          "timbre_change"
+        ],
+        "rms_change": -0.01803,
+        "onset_change": 0.38,
+        "centroid_change": 200.8
+      },
+      {
+        "time": 218.2601,
+        "bar": 112,
+        "types": [
+          "energy_decrease",
+          "drums_decrease",
+          "timbre_change"
+        ],
+        "rms_change": -0.091584,
+        "onset_change": -4.11,
+        "centroid_change": -1175.6
+      },
+      {
+        "time": 233.8633,
+        "bar": 120,
+        "types": [
+          "drums_increase",
+          "timbre_change"
+        ],
+        "rms_change": -0.016328,
+        "onset_change": 1.74,
+        "centroid_change": 449.7
+      },
+      {
+        "time": 249.4665,
+        "bar": 128,
+        "types": [
+          "drums_increase"
+        ],
+        "rms_change": -0.016023,
+        "onset_change": 1.79,
+        "centroid_change": -39.3
+      },
+      {
+        "time": 280.6729,
+        "bar": 144,
+        "types": [
+          "energy_decrease",
+          "timbre_change",
+          "bass_decrease"
+        ],
+        "rms_change": -0.031402,
+        "onset_change": 0.51,
+        "centroid_change": 329.2
+      },
+      {
+        "time": 296.2761,
+        "bar": 152,
+        "types": [
+          "energy_increase",
+          "drums_decrease",
+          "timbre_change",
+          "bass_increase"
+        ],
+        "rms_change": 0.137049,
+        "onset_change": -0.7,
+        "centroid_change": 603.9
+      },
+      {
+        "time": 311.8793,
+        "bar": 160,
+        "types": [
+          "drums_increase"
+        ],
+        "rms_change": 0.026945,
+        "onset_change": 0.45,
+        "centroid_change": -47.8
+      },
+      {
+        "time": 374.2921,
+        "bar": 192,
+        "types": [
+          "energy_decrease",
+          "timbre_change"
+        ],
+        "rms_change": -0.0492,
+        "onset_change": -0.64,
+        "centroid_change": 460.3
+      },
+      {
+        "time": 389.8953,
+        "bar": 200,
+        "types": [
+          "energy_decrease",
+          "drums_decrease",
+          "timbre_change"
+        ],
+        "rms_change": -0.167377,
+        "onset_change": -4.32,
+        "centroid_change": 982.1
+      }
+    ],
+    "micro_events": [],
+    "raw_segments": [
+      {
+        "start": 0.0,
+        "duration": 15.4185,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.31,
+        "score": 0.9278,
+        "top_candidates": [
+          {
+            "score": 0.9278,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9123,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8999,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.8922,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.8897,
+            "tonic": "E",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8874,
+            "tonic": "Bb",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 0,
+        "bar_end": 8,
+        "end": 15.4185,
+        "energy": {
+          "rms_mean": 0.267704,
+          "rms_std": 0.095946,
+          "onset_density": 6.81,
+          "spectral_centroid": 3063.8,
+          "low_freq_ratio": 0.956
+        }
+      },
+      {
+        "start": 15.4185,
+        "duration": 15.6032,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.581,
+        "score": 0.9373,
+        "top_candidates": [
+          {
+            "score": 0.9373,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9082,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9048,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9042,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.8954,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.893,
+            "tonic": "E",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 8,
+        "bar_end": 16,
+        "end": 31.0217,
+        "energy": {
+          "rms_mean": 0.270228,
+          "rms_std": 0.089881,
+          "onset_density": 7.18,
+          "spectral_centroid": 2854.5,
+          "low_freq_ratio": 0.947
+        }
+      },
+      {
+        "start": 31.0217,
+        "duration": 15.603199999999998,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.699,
+        "score": 0.9382,
+        "top_candidates": [
+          {
+            "score": 0.9382,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9033,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9024,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.902,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8945,
+            "tonic": "E",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8934,
+            "tonic": "Bb",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 16,
+        "bar_end": 24,
+        "end": 46.6249,
+        "energy": {
+          "rms_mean": 0.272608,
+          "rms_std": 0.088835,
+          "onset_density": 7.69,
+          "spectral_centroid": 2723.5,
+          "low_freq_ratio": 0.914
+        }
+      },
+      {
+        "start": 46.6249,
+        "duration": 15.603200000000001,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.44,
+        "score": 0.959,
+        "top_candidates": [
+          {
+            "score": 0.959,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.937,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9352,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9265,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9248,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9144,
+            "tonic": "Gb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 24,
+        "bar_end": 32,
+        "end": 62.2281,
+        "energy": {
+          "rms_mean": 0.318315,
+          "rms_std": 0.060384,
+          "onset_density": 8.01,
+          "spectral_centroid": 2453.4,
+          "low_freq_ratio": 0.932
+        }
+      },
+      {
+        "start": 62.2281,
+        "duration": 15.603200000000001,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.622,
+        "score": 0.9651,
+        "top_candidates": [
+          {
+            "score": 0.9651,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.934,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9299,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9287,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9102,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9095,
+            "tonic": "D",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 32,
+        "bar_end": 40,
+        "end": 77.8313,
+        "energy": {
+          "rms_mean": 0.320176,
+          "rms_std": 0.056992,
+          "onset_density": 7.88,
+          "spectral_centroid": 2378.3,
+          "low_freq_ratio": 0.909
+        }
+      },
+      {
+        "start": 77.8313,
+        "duration": 15.603200000000001,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.642,
+        "score": 0.9476,
+        "top_candidates": [
+          {
+            "score": 0.9476,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9155,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.91,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9064,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9027,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.896,
+            "tonic": "D",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 40,
+        "bar_end": 48,
+        "end": 93.4345,
+        "energy": {
+          "rms_mean": 0.27973,
+          "rms_std": 0.08232,
+          "onset_density": 7.63,
+          "spectral_centroid": 2642.5,
+          "low_freq_ratio": 0.897
+        }
+      },
+      {
+        "start": 93.4345,
+        "duration": 15.603200000000001,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.047,
+        "score": 0.9344,
+        "top_candidates": [
+          {
+            "score": 0.9344,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.932,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9107,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8753,
+            "tonic": "Bb",
+            "mode": "major"
+          },
+          {
+            "score": 0.8749,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.8581,
+            "tonic": "C",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 48,
+        "bar_end": 56,
+        "end": 109.0377,
+        "energy": {
+          "rms_mean": 0.305588,
+          "rms_std": 0.058857,
+          "onset_density": 7.82,
+          "spectral_centroid": 2761.8,
+          "low_freq_ratio": 0.849
+        }
+      },
+      {
+        "start": 109.0377,
+        "duration": 15.603200000000001,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.129,
+        "score": 0.9206,
+        "top_candidates": [
+          {
+            "score": 0.9206,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9141,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9025,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8718,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.8555,
+            "tonic": "Bb",
+            "mode": "major"
+          },
+          {
+            "score": 0.8479,
+            "tonic": "C",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 56,
+        "bar_end": 64,
+        "end": 124.6409,
+        "energy": {
+          "rms_mean": 0.260407,
+          "rms_std": 0.075139,
+          "onset_density": 7.24,
+          "spectral_centroid": 2621.3,
+          "low_freq_ratio": 0.8
+        }
+      },
+      {
+        "start": 124.6409,
+        "duration": 15.603200000000001,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.446,
+        "score": 0.9725,
+        "top_candidates": [
+          {
+            "score": 0.9725,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9502,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9468,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9396,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9205,
+            "tonic": "Bb",
+            "mode": "major"
+          },
+          {
+            "score": 0.9151,
+            "tonic": "D",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 64,
+        "bar_end": 72,
+        "end": 140.2441,
+        "energy": {
+          "rms_mean": 0.322209,
+          "rms_std": 0.083694,
+          "onset_density": 7.05,
+          "spectral_centroid": 2327.9,
+          "low_freq_ratio": 0.918
+        }
+      },
+      {
+        "start": 140.2441,
+        "duration": 15.603199999999987,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.587,
+        "score": 0.9698,
+        "top_candidates": [
+          {
+            "score": 0.9698,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9404,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9389,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9383,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9075,
+            "tonic": "D",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9047,
+            "tonic": "Bb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 72,
+        "bar_end": 80,
+        "end": 155.8473,
+        "energy": {
+          "rms_mean": 0.344382,
+          "rms_std": 0.05664,
+          "onset_density": 7.31,
+          "spectral_centroid": 2171.9,
+          "low_freq_ratio": 0.909
+        }
+      },
+      {
+        "start": 155.8473,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.594,
+        "score": 0.9698,
+        "top_candidates": [
+          {
+            "score": 0.9698,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9401,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.935,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9315,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9174,
+            "tonic": "C",
+            "mode": "major"
+          },
+          {
+            "score": 0.9135,
+            "tonic": "D",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 80,
+        "bar_end": 88,
+        "end": 171.4505,
+        "energy": {
+          "rms_mean": 0.326352,
+          "rms_std": 0.05667,
+          "onset_density": 7.69,
+          "spectral_centroid": 2372.7,
+          "low_freq_ratio": 0.91
+        }
+      },
+      {
+        "start": 171.4505,
+        "duration": 15.603199999999987,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.603,
+        "score": 0.971,
+        "top_candidates": [
+          {
+            "score": 0.971,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9409,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9353,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9324,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9219,
+            "tonic": "C",
+            "mode": "major"
+          },
+          {
+            "score": 0.9164,
+            "tonic": "A",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 88,
+        "bar_end": 96,
+        "end": 187.0537,
+        "energy": {
+          "rms_mean": 0.326676,
+          "rms_std": 0.055035,
+          "onset_density": 7.75,
+          "spectral_centroid": 2341.2,
+          "low_freq_ratio": 0.897
+        }
+      },
+      {
+        "start": 187.0537,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.546,
+        "score": 0.9702,
+        "top_candidates": [
+          {
+            "score": 0.9702,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9429,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9404,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9374,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9103,
+            "tonic": "D",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9101,
+            "tonic": "Bb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 96,
+        "bar_end": 104,
+        "end": 202.6569,
+        "energy": {
+          "rms_mean": 0.338458,
+          "rms_std": 0.054813,
+          "onset_density": 7.69,
+          "spectral_centroid": 2505.8,
+          "low_freq_ratio": 0.9
+        }
+      },
+      {
+        "start": 202.6569,
+        "duration": 15.603199999999987,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.507,
+        "score": 0.9709,
+        "top_candidates": [
+          {
+            "score": 0.9709,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9456,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9421,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9395,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9099,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9095,
+            "tonic": "Gb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 104,
+        "bar_end": 112,
+        "end": 218.2601,
+        "energy": {
+          "rms_mean": 0.342949,
+          "rms_std": 0.052731,
+          "onset_density": 7.63,
+          "spectral_centroid": 2443.2,
+          "low_freq_ratio": 0.893
+        }
+      },
+      {
+        "start": 218.2601,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.188,
+        "score": 0.9213,
+        "top_candidates": [
+          {
+            "score": 0.9213,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9119,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9036,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8705,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.8651,
+            "tonic": "Bb",
+            "mode": "major"
+          },
+          {
+            "score": 0.8308,
+            "tonic": "D",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 112,
+        "bar_end": 120,
+        "end": 233.8633,
+        "energy": {
+          "rms_mean": 0.251365,
+          "rms_std": 0.066023,
+          "onset_density": 3.52,
+          "spectral_centroid": 1267.6,
+          "low_freq_ratio": 0.855
+        }
+      },
+      {
+        "start": 233.8633,
+        "duration": 15.603199999999987,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.038,
+        "score": 0.898,
+        "top_candidates": [
+          {
+            "score": 0.898,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8961,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.8874,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8548,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.8335,
+            "tonic": "Bb",
+            "mode": "major"
+          },
+          {
+            "score": 0.8134,
+            "tonic": "C",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 120,
+        "bar_end": 128,
+        "end": 249.4665,
+        "energy": {
+          "rms_mean": 0.235037,
+          "rms_std": 0.056289,
+          "onset_density": 5.26,
+          "spectral_centroid": 1717.3,
+          "low_freq_ratio": 0.808
+        }
+      },
+      {
+        "start": 249.4665,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.142,
+        "score": 0.906,
+        "top_candidates": [
+          {
+            "score": 0.906,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8989,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.8907,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.86,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.839,
+            "tonic": "C",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8369,
+            "tonic": "C",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 128,
+        "bar_end": 136,
+        "end": 265.0697,
+        "energy": {
+          "rms_mean": 0.219014,
+          "rms_std": 0.055386,
+          "onset_density": 7.05,
+          "spectral_centroid": 1678.0,
+          "low_freq_ratio": 0.776
+        }
+      },
+      {
+        "start": 265.0697,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.603,
+        "score": 0.9629,
+        "top_candidates": [
+          {
+            "score": 0.9629,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9327,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9267,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9127,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9003,
+            "tonic": "Ab",
+            "mode": "major"
+          },
+          {
+            "score": 0.8835,
+            "tonic": "Bb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 136,
+        "bar_end": 144,
+        "end": 280.6729,
+        "energy": {
+          "rms_mean": 0.192454,
+          "rms_std": 0.045309,
+          "onset_density": 7.37,
+          "spectral_centroid": 1456.1,
+          "low_freq_ratio": 0.777
+        }
+      },
+      {
+        "start": 280.6729,
+        "duration": 15.603199999999958,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.616,
+        "score": 0.9651,
+        "top_candidates": [
+          {
+            "score": 0.9651,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9343,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9322,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9155,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9045,
+            "tonic": "Bb",
+            "mode": "major"
+          },
+          {
+            "score": 0.9029,
+            "tonic": "Ab",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 144,
+        "bar_end": 152,
+        "end": 296.2761,
+        "energy": {
+          "rms_mean": 0.161052,
+          "rms_std": 0.036012,
+          "onset_density": 7.88,
+          "spectral_centroid": 1785.3,
+          "low_freq_ratio": 0.503
+        }
+      },
+      {
+        "start": 296.2761,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.41,
+        "score": 0.9671,
+        "top_candidates": [
+          {
+            "score": 0.9671,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9466,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9453,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9302,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9247,
+            "tonic": "Bb",
+            "mode": "major"
+          },
+          {
+            "score": 0.9161,
+            "tonic": "D",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 152,
+        "bar_end": 160,
+        "end": 311.8793,
+        "energy": {
+          "rms_mean": 0.298101,
+          "rms_std": 0.074079,
+          "onset_density": 7.18,
+          "spectral_centroid": 2389.2,
+          "low_freq_ratio": 0.87
+        }
+      },
+      {
+        "start": 311.8793,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.569,
+        "score": 0.9673,
+        "top_candidates": [
+          {
+            "score": 0.9673,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9388,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9378,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9332,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9139,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9079,
+            "tonic": "Gb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 160,
+        "bar_end": 168,
+        "end": 327.4825,
+        "energy": {
+          "rms_mean": 0.325046,
+          "rms_std": 0.054817,
+          "onset_density": 7.63,
+          "spectral_centroid": 2341.4,
+          "low_freq_ratio": 0.889
+        }
+      },
+      {
+        "start": 327.4825,
+        "duration": 15.603199999999958,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.561,
+        "score": 0.9726,
+        "top_candidates": [
+          {
+            "score": 0.9726,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9446,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9432,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9385,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9097,
+            "tonic": "D",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9087,
+            "tonic": "Bb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 168,
+        "bar_end": 176,
+        "end": 343.0857,
+        "energy": {
+          "rms_mean": 0.339428,
+          "rms_std": 0.052353,
+          "onset_density": 7.63,
+          "spectral_centroid": 2422.8,
+          "low_freq_ratio": 0.89
+        }
+      },
+      {
+        "start": 343.0857,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.566,
+        "score": 0.9702,
+        "top_candidates": [
+          {
+            "score": 0.9702,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9418,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9412,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9376,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9123,
+            "tonic": "D",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9095,
+            "tonic": "Bb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 176,
+        "bar_end": 184,
+        "end": 358.6889,
+        "energy": {
+          "rms_mean": 0.341583,
+          "rms_std": 0.055981,
+          "onset_density": 7.75,
+          "spectral_centroid": 2324.6,
+          "low_freq_ratio": 0.912
+        }
+      },
+      {
+        "start": 358.6889,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.459,
+        "score": 0.9628,
+        "top_candidates": [
+          {
+            "score": 0.9628,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9398,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.9383,
+            "tonic": "Bb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9312,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.9267,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9175,
+            "tonic": "Gb",
+            "mode": "major"
+          }
+        ],
+        "bar_start": 184,
+        "bar_end": 192,
+        "end": 374.2921,
+        "energy": {
+          "rms_mean": 0.325512,
+          "rms_std": 0.059437,
+          "onset_density": 7.5,
+          "spectral_centroid": 2471.3,
+          "low_freq_ratio": 0.951
+        }
+      },
+      {
+        "start": 374.2921,
+        "duration": 15.603200000000015,
+        "key": "F minor",
+        "camelot": "4A",
+        "confidence": 0.535,
+        "score": 0.9294,
+        "top_candidates": [
+          {
+            "score": 0.9294,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9026,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8964,
+            "tonic": "F",
+            "mode": "major"
+          },
+          {
+            "score": 0.894,
+            "tonic": "Db",
+            "mode": "major"
+          },
+          {
+            "score": 0.8859,
+            "tonic": "E",
+            "mode": "minor"
+          },
+          {
+            "score": 0.8838,
+            "tonic": "Bb",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 192,
+        "bar_end": 200,
+        "end": 389.8953,
+        "energy": {
+          "rms_mean": 0.276312,
+          "rms_std": 0.092893,
+          "onset_density": 6.86,
+          "spectral_centroid": 2931.6,
+          "low_freq_ratio": 0.959
+        }
+      },
+      {
+        "start": 389.8953,
+        "duration": 9.462099999999964,
+        "key": "Ab minor",
+        "camelot": "1A",
+        "confidence": 0.096,
+        "score": 0.9642,
+        "top_candidates": [
+          {
+            "score": 0.9642,
+            "tonic": "Ab",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9593,
+            "tonic": "Eb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9552,
+            "tonic": "Gb",
+            "mode": "minor"
+          },
+          {
+            "score": 0.952,
+            "tonic": "F",
+            "mode": "minor"
+          },
+          {
+            "score": 0.9507,
+            "tonic": "Ab",
+            "mode": "major"
+          },
+          {
+            "score": 0.9496,
+            "tonic": "Db",
+            "mode": "minor"
+          }
+        ],
+        "bar_start": 200,
+        "bar_end": 208,
+        "end": 399.3574,
+        "energy": {
+          "rms_mean": 0.108935,
+          "rms_std": 0.139065,
+          "onset_density": 2.54,
+          "spectral_centroid": 3913.7,
+          "low_freq_ratio": 0.952
+        }
+      }
+    ],
+    "beat_grid": {
+      "first_downbeat": 30.5341,
+      "first_downbeat_idx": 0,
+      "downbeat_method": "extrapolation",
+      "downbeat_confidence": 0.0,
+      "bpm_confidence": 0.909,
+      "tempo_stable": true,
+      "tempo_changes": null,
+      "beat_count": 98,
+      "beat_intervals": {
+        "mean": 0.4917,
+        "std": 0.0088,
+        "min": 0.4876,
+        "max": 0.5108
+      }
+    }
+  }
+}

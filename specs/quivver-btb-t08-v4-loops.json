@@ -1,0 +1,53 @@
+{
+  "name": "Quivver → BTB — v4 (Looped Runway, kick-aligned)",
+  "description": "v4: Added kick phase correction to v3. BTB kicks land ~30ms after Quivver's (measured from rendered output double-kick analysis + sharpness optimization). Correction: BTB first_beat_sample shifted -1500 samples (34ms earlier). Loop copies same as v3 (4x each) to keep vocal 'da da da' out of overlap zone.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/quivver-btb-v4-loops.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Quivver — Brothers & Sisters (Original Mix)",
+      "file": "Quivver - Brothers & Sisters (Original Mix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 73735,
+      "cue_in_bar": 0,
+      "cue_out_bar": 226,
+      "gain_db": 1.0,
+      "rb_offset": 0,
+      "loop_end": {"bars": 8, "copies": 4},
+      "notes": "LUFS -14.2. Unchanged."
+    },
+    {
+      "id": 2,
+      "name": "Below The Belt (Chris Micali Remix)",
+      "file": "Below The Belt (Chris Micali Remix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 7188,
+      "cue_in_bar": 0,
+      "cue_out_bar": 241,
+      "gain_db": 0.5,
+      "rb_offset": 0,
+      "loop_start": {"bars": 8, "copies": 4},
+      "notes": "LUFS -13.9. Kick-aligned: fbs 8688 → 7188 (-1500 samples / -34ms). Sharpness optimization found BTB kicks ~30ms late vs Quivver. 4 loop copies keep 'da da da' vocal (bar 16) out of overlap."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 40,
+      "fade_type": "equal_power",
+      "automation": {
+        "outgoing": [[0, 1.0], [8, 0.95], [16, 0.85], [24, 0.7], [30, 0.5], [34, 0.3], [38, 0.1], [40, 0.0]],
+        "incoming": [[0, 0.0], [8, 0.15], [16, 0.35], [24, 0.55], [30, 0.7], [34, 0.85], [38, 0.95], [40, 1.0]]
+      },
+      "notes": "v4: Same automation as v3. Kick phase correction on BTB should eliminate the double-kick flamming. 40-bar overlap stays entirely in kick-only territory."
+    }
+  ]
+}

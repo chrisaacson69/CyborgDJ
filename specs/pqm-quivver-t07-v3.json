@@ -1,0 +1,51 @@
+{
+  "name": "PQM → Quivver Transition — v3 (Kick Aligned)",
+  "description": "v3: Kick phase alignment. Quivver shifted -2006 samples to align kicks at overlap bar 40. This aligns kicks but introduces ~38ms broadband content offset — the fundamental trade-off of mixing different producers. A DJ aligns kicks by ear; the timbral difference masks the broader content offset.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/pqm-quivver-v3.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "You Are Sleeping (PQM Meets Luke Chable Vocal Pass)",
+      "file": "You Are Sleeping (PQM Meets Luke Chable Vocal Pass).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 83437,
+      "cue_in_bar": 65,
+      "cue_out_bar": 289,
+      "gain_db": -0.5,
+      "rb_offset": 0,
+      "notes": "LUFS -12.6. Unchanged."
+    },
+    {
+      "id": 2,
+      "name": "Quivver — Brothers & Sisters (Original Mix)",
+      "file": "Quivver - Brothers & Sisters (Original Mix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 71729,
+      "cue_in_bar": 0,
+      "cue_out_bar": 226,
+      "gain_db": 1.0,
+      "rb_offset": 0,
+      "notes": "LUFS -14.2. Kick-aligned: -2006 samples from 73735. Kicks align at overlap midpoint, but broadband content offset ~38ms. Different-producer trade-off."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 80,
+      "fade_type": "equal_power",
+      "automation": {
+        "outgoing": [[0, 1.0], [20, 0.9], [30, 0.85], [38, 0.8], [42, 0.5], [48, 0.2], [56, 0.1], [66, 0.05], [70, 0.0], [80, 0.0]],
+        "incoming": [[0, 0.0], [20, 0.2], [30, 0.05], [38, 0.05], [40, 0.4], [42, 0.6], [48, 0.85], [56, 0.95], [66, 1.0], [70, 1.0], [80, 1.0]]
+      },
+      "notes": "v3: Same automation. Kick-aligned phase correction."
+    }
+  ]
+}

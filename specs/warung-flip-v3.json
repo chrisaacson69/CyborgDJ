@@ -1,0 +1,57 @@
+{
+  "name": "Warung Luminescence → Flip of the Coin — v3 (7:30 Crossover)",
+  "description": "v3: Same energy as v2 but crossover at ~7:30 per user preference. 16-bar overlap starting at Warung bar 224 (melody just died). Automation crosses 50/50 at overlap bar 5 = Warung bar 229 = ~7:30. Flip enters, takes over quickly.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/warung-flip-v3.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Warung - Luminescence",
+      "file": "Warung - Luminescence.mp3",
+      "original_bpm": 122.0,
+      "target_bpm": 122.0,
+      "first_beat_sample": 7679,
+      "cue_in_bar": 0,
+      "cue_out_bar": 240,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "3A (Bb minor). Melody gone by bar 224. Kick/bass only bars 224-239."
+    },
+    {
+      "id": 2,
+      "name": "Flip of the Coin (Extended Mix)",
+      "file": "Flip of the Coin (Extended Mix).mp3",
+      "original_bpm": 122.0,
+      "target_bpm": 122.0,
+      "first_beat_sample": 22528,
+      "cue_in_bar": 0,
+      "cue_out_bar": 200,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "4A (F minor). Kick from bar 0, mids build at 8, DROP at 24."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 16,
+      "fade_type": "equal_power",
+      "automation": {
+        "outgoing": [[0, 1.0], [3, 0.8], [5, 0.5], [8, 0.2], [12, 0.05], [16, 0.0]],
+        "incoming": [[0, 0.0], [3, 0.3], [5, 0.5], [8, 0.8], [10, 0.9], [12, 0.95], [16, 1.0]]
+      },
+      "eq_3band_incoming": {
+        "low": [0.0, 1.0],
+        "mid": [1.0, 1.0],
+        "high": [1.0, 1.0],
+        "low_freq": 200
+      },
+      "notes": "v3: 16-bar overlap (Warung 224-240, Flip 0-16). Crossover at overlap bar 5 = Warung bar 229 = ~7:30. Warung melody already gone at bar 224, so overlap starts in kick-only territory. Flip gets 16 bars of intro which takes it right up to where mids are developing. Front-loaded automation — Flip takes over fast, Warung lingers as a kick bed then disappears."
+    }
+  ]
+}

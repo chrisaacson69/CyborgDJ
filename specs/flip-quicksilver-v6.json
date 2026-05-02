@@ -1,0 +1,62 @@
+{
+  "name": "Flip of the Coin → Quicksilver — v6 (energy-to-energy, skip the quiet)",
+  "description": "v6: Skip QS's quiet buildup entirely. Flip at full dance energy → 4-bar crossfade with drum swap → QS's own transition melody at bar 36 (1:10) → QS energy hit at bar 40. Uses QS's own structural transition as the on-ramp.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/flip-quicksilver-v6.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Flip of the Coin (Extended Mix)",
+      "file": "Flip of the Coin (Extended Mix).mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 22528,
+      "cue_in_bar": 172,
+      "cue_out_bar": 188,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "4A (F minor). Full dance energy bars 172-188 (rms ~0.34). Cut while still hot."
+    },
+    {
+      "id": 2,
+      "name": "Quicksilver",
+      "file": "Quicksilver.mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 37616,
+      "cue_in_bar": 36,
+      "cue_out_bar": 80,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "3A (Bb minor). Phase-aligned. Bar 34-36 = melody transition. Bar 40 = energy hit (rms 0.307). Bar 48 = peak (rms 0.315). Bars 56-72 = breakdown. Bar 80 = DROP."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 4,
+      "fade_type": "equal_power",
+      "automation": {
+        "low_freq": 200,
+        "high_freq": 2500,
+
+        "outgoing_low":  [[0, 1.0], [2, 1.0], [3, 0.3], [4, 0.0]],
+        "outgoing_mid":  [[0, 1.0], [2, 0.6], [3, 0.3], [4, 0.0]],
+        "outgoing_high": [[0, 1.0], [2, 0.5], [3, 0.2], [4, 0.0]],
+
+        "incoming_low":  [[0, 0.0], [2, 0.0], [3, 0.7], [4, 1.0]],
+        "incoming_mid":  [[0, 0.0], [1, 0.4], [2, 0.7], [3, 0.9], [4, 1.0]],
+        "incoming_high": [[0, 0.0], [1, 0.5], [2, 0.8], [3, 0.95], [4, 1.0]],
+
+        "outgoing": [[0, 1.0], [2, 0.7], [3, 0.3], [4, 0.0]],
+        "incoming": [[0, 0.0], [1, 0.4], [2, 0.7], [3, 0.9], [4, 1.0]]
+      },
+      "notes": "v6: Energy-to-energy. 4-bar overlap at Flip 184-188 / QS 34-38. QS melody comes in over Flip's dance floor (mids/highs first). Drum swap at bar 2-3: Flip bass drops, QS bass rises. By bar 4: QS owns it, melody leads into bar 40 energy hit. Key: 4A→3A adjacent Camelot."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Quivver → BTB — v5 (Looped Runway + Bass EQ)",
+  "description": "v5: Addresses the structural rhythmic clash. Quivver's outro has 8th-note kicks (not clean 4/4), so BTB's straight 4/4 kick fights the rhythm. Fix: kill BTB's low end during early overlap (bass starts at 0.0, ramps to 1.0). BTB enters as mids/highs first (percussive texture), then bass ramps in as Quivver fades. This mimics a DJ using the bass EQ knob.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/quivver-btb-v5-eq.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Quivver — Brothers & Sisters (Original Mix)",
+      "file": "Quivver - Brothers & Sisters (Original Mix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 73735,
+      "cue_in_bar": 0,
+      "cue_out_bar": 226,
+      "gain_db": 1.0,
+      "rb_offset": 0,
+      "loop_end": {"bars": 8, "copies": 4},
+      "notes": "LUFS -14.2. Same as v3/v4."
+    },
+    {
+      "id": 2,
+      "name": "Below The Belt (Chris Micali Remix)",
+      "file": "Below The Belt (Chris Micali Remix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 8688,
+      "cue_in_bar": 0,
+      "cue_out_bar": 241,
+      "gain_db": 0.5,
+      "rb_offset": 0,
+      "loop_start": {"bars": 8, "copies": 4},
+      "notes": "LUFS -13.9. Back to original first_beat_sample (phase correction not needed — issue is structural rhythm, not timing). 4 loop copies keep vocal out of overlap."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 40,
+      "fade_type": "equal_power",
+      "automation": {
+        "outgoing": [[0, 1.0], [8, 0.95], [16, 0.85], [24, 0.7], [30, 0.5], [34, 0.3], [38, 0.1], [40, 0.0]],
+        "incoming": [[0, 0.0], [8, 0.15], [16, 0.35], [24, 0.55], [30, 0.7], [34, 0.85], [38, 0.95], [40, 1.0]]
+      },
+      "eq_3band_incoming": {
+        "low": [0.0, 1.0],
+        "mid": [1.0, 1.0],
+        "high": [1.0, 1.0],
+        "low_freq": 250,
+        "high_freq": 3000
+      },
+      "notes": "v5: Same volume automation as v3. Added 3-band EQ on incoming (BTB): bass killed at start (0.0), ramps to full (1.0) across the overlap. BTB enters as hi-hats/percussion texture only, then bass gradually fills in as Quivver's 8th-note kicks fade. Crossover at 250Hz catches the kick fundamental without touching upper harmonics."
+    }
+  ]
+}

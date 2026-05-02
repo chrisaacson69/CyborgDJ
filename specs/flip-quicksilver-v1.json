@@ -1,0 +1,57 @@
+{
+  "name": "Flip of the Coin → Quicksilver — v1",
+  "description": "v1: 16-bar overlap. Flip winding down (bars 192-208) blends with Quicksilver's breakdown/build (bars 64-80). Quicksilver drops at bar 80 as Flip exits. Natural bass handoff — Quicksilver's entry zone has no bass content.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/flip-quicksilver-v1.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Flip of the Coin (Extended Mix)",
+      "file": "Flip of the Coin (Extended Mix).mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 22528,
+      "cue_in_bar": 176,
+      "cue_out_bar": 208,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "4A (F minor). Last peak at bars 176-184. Wind-down from bar 192, sparse at 200 (rms 0.109), ends ~208."
+    },
+    {
+      "id": 2,
+      "name": "Quicksilver",
+      "file": "Quicksilver.mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 33280,
+      "cue_in_bar": 64,
+      "cue_out_bar": 104,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "3A (Bb minor). Breakdown at bar 64 (rms 0.159), deepest at 72 (no bass, lf=0.47), DROP at 80 (rms 0.315, full bass). first_beat_sample may need phase alignment calibration."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 16,
+      "fade_type": "equal_power",
+      "automation": {
+        "outgoing": [[0, 1.0], [4, 0.85], [8, 0.5], [12, 0.2], [14, 0.05], [16, 0.0]],
+        "incoming": [[0, 0.0], [4, 0.3], [8, 0.5], [12, 0.8], [14, 0.95], [16, 1.0]]
+      },
+      "eq_3band_incoming": {
+        "low": [0.0, 1.0],
+        "mid": [1.0, 1.0],
+        "high": [1.0, 1.0],
+        "low_freq": 200
+      },
+      "notes": "16-bar overlap: Flip 192-208 / Quicksilver 64-80. Flip naturally dying (rms 0.276→0.109). Quicksilver enters in breakdown with no bass (lf=0.47), builds 8 bars, drops at bar 80 with full bass. Incoming bass killed on entry, ramps to full — cooperates with Quicksilver's natural structure since bass doesn't arrive until the drop. 50/50 crossover at overlap bar 8. Key: 4A→3A = adjacent Camelot, perfect harmonic mix."
+    }
+  ]
+}

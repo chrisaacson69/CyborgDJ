@@ -1,0 +1,51 @@
+{
+  "name": "Flip of the Coin → Quicksilver — v3 (structural cut at QS bar 54)",
+  "description": "v3: Fast structural cut. Flip plays drum-heavy outro to bar 200, quick 2-bar crossfade to Quicksilver at bar 54 — a brief bridge moment right before QS drums resume at bar 56. No long blend needed.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/flip-quicksilver-v3.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Flip of the Coin (Extended Mix)",
+      "file": "Flip of the Coin (Extended Mix).mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 22528,
+      "cue_in_bar": 184,
+      "cue_out_bar": 202,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "4A (F minor). Drum-heavy outro. Bar 192 energy starts decreasing, bar 200 sparse."
+    },
+    {
+      "id": 2,
+      "name": "Quicksilver",
+      "file": "Quicksilver.mp3",
+      "original_bpm": 123.0,
+      "target_bpm": 123.0,
+      "first_beat_sample": 33280,
+      "cue_in_bar": 54,
+      "cue_out_bar": 104,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "3A (Bb minor). Bar 54 = brief bridge moment (1:45). Drums/energy resume at bar 56. Full breakdown at 64, DROP at 80."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 2,
+      "fade_type": "equal_power",
+      "automation": {
+        "outgoing": [[0, 1.0], [1, 0.3], [2, 0.0]],
+        "incoming": [[0, 0.0], [1, 0.7], [2, 1.0]]
+      },
+      "notes": "v3: Structural cut. 2-bar crossfade at Flip bar 200 / QS bar 54. Flip's drums hand off to QS's brief bridge, then QS drums resume. Fast, intentional. Key: 4A→3A adjacent Camelot."
+    }
+  ]
+}

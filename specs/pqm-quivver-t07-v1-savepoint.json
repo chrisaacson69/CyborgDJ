@@ -1,0 +1,51 @@
+{
+  "name": "PQM → Quivver Transition — v1 Savepoint (from DJ Set 1b)",
+  "description": "Savepoint of the 'good enough' transition from DJ Set 1b. 80-bar fader automation, 1A->1A harmonic match. Both 129.2 BPM (no stretch). PQM vocal callback at bar 247 (overlap bar 38) is the distraction anchor.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/pqm-quivver-v1-savepoint.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "You Are Sleeping (PQM Meets Luke Chable Vocal Pass)",
+      "file": "You Are Sleeping (PQM Meets Luke Chable Vocal Pass).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 83437,
+      "cue_in_bar": 65,
+      "cue_out_bar": 289,
+      "gain_db": -0.5,
+      "rb_offset": 0,
+      "notes": "LUFS -12.6. Inizio=1.892s, phase=1. Enter at bar 65 (1A melodic section). Outro from 178 (long offramp). Vocal callbacks: 208, 225, 247 (after quiet 241), 269. Dead by 272. Must be out by 289."
+    },
+    {
+      "id": 2,
+      "name": "Quivver — Brothers & Sisters (Original Mix)",
+      "file": "Quivver - Brothers & Sisters (Original Mix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 73735,
+      "cue_in_bar": 0,
+      "cue_out_bar": 226,
+      "gain_db": 1.0,
+      "rb_offset": 0,
+      "notes": "LUFS -14.2. Inizio=1.672s, phase=3. 1A->1A perfect harmonic match with PQM. Melody ends ~226."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 80,
+      "fade_type": "equal_power",
+      "automation": {
+        "outgoing": [[0, 1.0], [20, 0.9], [30, 0.85], [38, 0.8], [42, 0.5], [48, 0.2], [56, 0.1], [66, 0.05], [70, 0.0], [80, 0.0]],
+        "incoming": [[0, 0.0], [20, 0.2], [30, 0.05], [38, 0.05], [40, 0.4], [42, 0.6], [48, 0.85], [56, 0.95], [66, 1.0], [70, 1.0], [80, 1.0]]
+      },
+      "notes": "v1 SAVEPOINT from DJ Set 1b. 80-bar fader automation. PQM vocal callback at bar 38(247) is the distraction anchor — Quivver slides in during vocal, established by the time it ends. Mute Quivver during PQM quiet zone (30-38)."
+    }
+  ]
+}

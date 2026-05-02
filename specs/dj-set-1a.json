@@ -1,0 +1,296 @@
+{
+  "name": "DJ Set 1a — Progressive/Trance Mix (Revised)",
+  "description": "11-track set, BPM staircase 120-129. Revision: LUFS-based gain_db corrections, gain humps on dip-prone overlaps, EQ refinements on hard transitions.",
+  "sample_rate": 44100,
+  "tracks_dir": "../music/",
+  "output_file": "output/dj-set-1a-mix.wav",
+
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Martin Roth — Deep Style (Original Mix)",
+      "file": "Martin Roth - Deep Style (Original Mix).mp3",
+      "original_bpm": 120.19,
+      "target_bpm": 123.05,
+      "first_beat_sample": 8687,
+      "cue_in_bar": 63,
+      "cue_out_bar": 207,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "Opener. LUFS -13.3 (set average). No gain correction needed."
+    },
+    {
+      "id": 2,
+      "name": "Marsh feat. Mimi Page — Foss",
+      "file": "Marsh feat. Mimi Page - Foss (Official Music Video).mp3",
+      "original_bpm": 123.05,
+      "target_bpm": 123.05,
+      "first_beat_sample": 647697,
+      "cue_in_bar": 0,
+      "cue_out_bar": 165,
+      "gain_db": 0.5,
+      "rb_offset": 6,
+      "notes": "LUFS -13.9 (0.6 dB below avg). +0.5 dB correction."
+    },
+    {
+      "id": 3,
+      "name": "Alone (Extended Mix)",
+      "file": "Alone (Extended Mix).mp3",
+      "original_bpm": 123.05,
+      "target_bpm": 123.05,
+      "first_beat_sample": 22006,
+      "cue_in_bar": 48,
+      "cue_out_bar": 199.75,
+      "gain_db": -0.5,
+      "rb_offset": 0,
+      "notes": "LUFS -12.8 (0.5 dB above avg). -0.5 dB correction."
+    },
+    {
+      "id": 4,
+      "name": "Kasablanca — Am I Dreaming?",
+      "file": "Kasablanca - Am I Dreaming\uff1f (@Kasablanca).mp3",
+      "original_bpm": 126.05,
+      "target_bpm": 126.05,
+      "first_beat_sample": 338933,
+      "cue_in_bar": 7,
+      "cue_out_bar": 109,
+      "gain_db": 0,
+      "rb_offset": 3,
+      "notes": "No LUFS data available. No correction applied."
+    },
+    {
+      "id": 5,
+      "name": "Orbital — Otoño",
+      "file": "Orbital - Oto\u00f1o.mp3",
+      "original_bpm": 126.05,
+      "target_bpm": 126.05,
+      "first_beat_sample": 8203,
+      "cue_in_bar": 1,
+      "cue_out_bar": 181,
+      "gain_db": 1.0,
+      "rb_offset": 0,
+      "notes": "LUFS -14.4 (quietest track, 1.1 dB below avg). +1.0 dB correction."
+    },
+    {
+      "id": 6,
+      "name": "Simon Doty — Lady Danger (Extended Mix)",
+      "file": "Simon Doty - Lady Danger (Extended Mix).mp3",
+      "original_bpm": 128.0,
+      "target_bpm": 128.0,
+      "first_beat_sample": 38410,
+      "cue_in_bar": 32,
+      "cue_out_bar": 240,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "LUFS -13.1 (0.2 dB above avg). No correction needed."
+    },
+    {
+      "id": 7,
+      "name": "You Are Sleeping (PQM Meets Luke Chable Vocal Pass)",
+      "file": "You Are Sleeping (PQM Meets Luke Chable Vocal Pass).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 83437,
+      "cue_in_bar": 65,
+      "cue_out_bar": 289,
+      "gain_db": -0.5,
+      "rb_offset": 0,
+      "notes": "LUFS -12.6 (loudest track, 0.7 dB above avg). -0.5 dB correction."
+    },
+    {
+      "id": 8,
+      "name": "Quivver — Brothers & Sisters (Original Mix)",
+      "file": "Quivver - Brothers & Sisters (Original Mix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 73735,
+      "cue_in_bar": 0,
+      "cue_out_bar": 237,
+      "gain_db": 1.0,
+      "rb_offset": 0,
+      "notes": "LUFS -14.2 (0.9 dB below avg). +1.0 dB correction. Critical for 7->8 handover."
+    },
+    {
+      "id": 9,
+      "name": "Below The Belt (Chris Micali Remix)",
+      "file": "Below The Belt (Chris Micali Remix).mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 8688,
+      "cue_in_bar": 17,
+      "cue_out_bar": 241,
+      "gain_db": 0.5,
+      "rb_offset": 0,
+      "notes": "LUFS -13.9 (0.6 dB below avg). +0.5 dB correction."
+    },
+    {
+      "id": 10,
+      "name": "Ronski Speed & Syntrobic feat. Renee Stahl — Pink Skye",
+      "file": "Ronski Speed & Syntrobic feat. Renee Stahl-Pink Skye.mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 20992,
+      "cue_in_bar": 29,
+      "cue_out_bar": 185,
+      "gain_db": 0,
+      "rb_offset": 0,
+      "notes": "LUFS -13.1 (0.2 dB above avg). No correction needed."
+    },
+    {
+      "id": 11,
+      "name": "LTN — Daylight (Original Mix)",
+      "file": "LTN - Daylight (Original Mix) [Enhanced Progressive].mp3",
+      "original_bpm": 129.2,
+      "target_bpm": 129.2,
+      "first_beat_sample": 126964,
+      "cue_in_bar": 0,
+      "cue_out_bar": 207,
+      "gain_db": -0.5,
+      "rb_offset": 1,
+      "notes": "LUFS -12.7 (0.6 dB above avg). -0.5 dB correction."
+    }
+  ],
+
+  "transitions": [
+    {
+      "from_track": 1,
+      "to_track": 2,
+      "type": "crossfade",
+      "overlap_bars": 8,
+      "fade_type": "exp",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "overlap_gain_hump_db": 1.5,
+      "notes": "CHANGE: Added +1.5 dB gain hump. Deep Style tail declining (RMS 0.265->0.250) + exp fade midpoint dip. Foss hum is low-harmonic so 4A->6A gap (2 steps) is masked."
+    },
+    {
+      "from_track": 2,
+      "to_track": 3,
+      "type": "crossfade",
+      "overlap_bars": 6,
+      "fade_type": "exp",
+      "eq_outgoing": null,
+      "eq_incoming": [
+        {"type": "lowpass", "frequency": 800}
+      ],
+      "eq_incoming_ramp": true,
+      "eq_ramp_power": 0.5,
+      "overlap_gain_hump_db": 2.5,
+      "notes": "CHANGES: (1) eq_ramp_power 0.33->0.5 — slower LP open, keeps Alone's 9B synth tamed longer during 3A->9B gap (6 Camelot steps). (2) +2.5 dB gain hump — both tracks in quiet zones during overlap (Foss tail RMS 0.155, Alone breakdown RMS 0.187)."
+    },
+    {
+      "from_track": 3,
+      "to_track": 4,
+      "type": "clean_cut",
+      "notes": "NO CHANGE. BPM jump 123->126. Clean cut is correct."
+    },
+    {
+      "from_track": 4,
+      "to_track": 5,
+      "type": "crossfade",
+      "overlap_bars": 14.75,
+      "fade_type": "equal_power",
+      "outgoing_hold": true,
+      "eq_outgoing": null,
+      "eq_incoming": [
+        {"type": "lowpass", "frequency": 500}
+      ],
+      "eq_incoming_ramp": true,
+      "eq_ramp_power": 0.33,
+      "notes": "NO TRANSITION CHANGE. Outgoing hold + LP ramp is correct. Otono gain_db +1.0 compensates for it being the quietest track."
+    },
+    {
+      "from_track": 5,
+      "to_track": 6,
+      "type": "crossfade",
+      "overlap_bars": 8,
+      "fade_type": "exp",
+      "fade_power": 6,
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "eq_3band_incoming": {
+        "low": [0.0, 1.0],
+        "mid": [0.2, 1.0],
+        "high": [0.5, 1.0]
+      },
+      "tempo_ramp": {
+        "start_bpm": 126.05,
+        "end_bpm": 128.0,
+        "step_bars": 2,
+        "ramp_bars": 16
+      },
+      "notes": "NO TRANSITION CHANGE. 3-band incoming + exp p=6 is well-designed. Otono +1.0 dB gain_db narrows the 1.3 dB LUFS gap."
+    },
+    {
+      "from_track": 6,
+      "to_track": 7,
+      "type": "crossfade",
+      "overlap_bars": 17,
+      "fade_type": "equal_power",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "eq_3band_outgoing": {
+        "low": [1.0, 0.0],
+        "mid": [1.0, 0.0],
+        "high": [1.0, 0.0],
+        "power": 2
+      },
+      "overlap_gain_hump_db": 1.5,
+      "tempo_ramp": {
+        "start_bpm": 128.0,
+        "end_bpm": 129.2,
+        "step_bars": 2
+      },
+      "notes": "CHANGES: (1) 3-band power 3->2 — LD already naturally decaying (RMS 0.335->0.135), so gentler rolloff prevents premature disappearance. (2) +1.5 dB gain hump for the equal_power midpoint dip."
+    },
+    {
+      "from_track": 7,
+      "to_track": 8,
+      "type": "crossfade",
+      "overlap_bars": 80,
+      "fade_type": "equal_power",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "automation": {
+        "outgoing": [[0, 1.0], [20, 0.9], [30, 0.85], [38, 0.8], [42, 0.5], [48, 0.2], [56, 0.1], [66, 0.05], [70, 0.0], [80, 0.0]],
+        "incoming": [[0, 0.0], [20, 0.2], [30, 0.05], [38, 0.05], [40, 0.4], [42, 0.6], [48, 0.85], [56, 0.95], [66, 1.0], [70, 1.0], [80, 1.0]]
+      },
+      "notes": "NO TRANSITION CHANGE. Automation is meticulously tuned. Quivver gain_db +1.0 fixes the 1.6 dB LUFS gap — the most impactful single gain correction in the set."
+    },
+    {
+      "from_track": 8,
+      "to_track": 9,
+      "type": "crossfade",
+      "overlap_bars": 2,
+      "fade_type": "s_curve",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "notes": "NO CHANGE. Still flagged for pro feedback. Bassline clash unresolvable with current tools."
+    },
+    {
+      "from_track": 9,
+      "to_track": 10,
+      "type": "crossfade",
+      "overlap_bars": 4,
+      "fade_type": "s_curve",
+      "eq_outgoing": [
+        {"type": "highpass", "frequency": 500}
+      ],
+      "eq_incoming": [
+        {"type": "lowpass", "frequency": 1000}
+      ],
+      "notes": "CHANGE: Added LP 1000 on incoming Pink Skye. The 4-step Camelot gap (1A->9A) means PS highs clash with BTB mids above 500 Hz. LP tames PS highs during overlap while the fill distraction anchor still punches through (percussion-heavy, not affected by LP)."
+    },
+    {
+      "from_track": 10,
+      "to_track": 11,
+      "type": "crossfade",
+      "overlap_bars": 19,
+      "fade_type": "equal_power",
+      "eq_outgoing": null,
+      "eq_incoming": null,
+      "overlap_gain_hump_db": 3.5,
+      "notes": "NO CHANGE. Already measured flat to -0.3 dB. Gain_db corrections on PS (0) and Daylight (-0.5) tighten the chain."
+    }
+  ]
+}
