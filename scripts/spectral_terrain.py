@@ -1,11 +1,21 @@
+"""Per transition of a mix spec: where the two tracks' energies cross in the overlap,
+against where the automation hands off (ALIGNED / EARLY / LATE), from the per-bar
+spectra in the music library's analysis caches.
+
+    python scripts/spectral_terrain.py <spec.json>
+"""
 import sys
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 import json
+import os
 import numpy as np
 from pathlib import Path
 
-CAMELOT_DIR = Path('C:/Users/Chris.Isaacson/source/repos/camelot_from_youtube')
-SPEC_PATH = Path('C:/Users/Chris.Isaacson/source/repos/cyborgdj/specs/dj-set-1b.json')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from cyborgdj.engine.paths import library_root  # noqa: E402
+
+SPEC_PATH = Path(sys.argv[1])
+CAMELOT_DIR = library_root(SPEC_PATH) / 'analysis'
 
 spec = json.load(open(SPEC_PATH))
 tracks = spec['tracks']
