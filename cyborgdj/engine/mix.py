@@ -10,16 +10,22 @@ from .loader import load_and_prepare, trim_to_bars, apply_loop
 from .stretcher import time_stretch, recompute_bars_after_stretch
 from .crossfader import crossfade, clean_cut, bars_to_samples, get_fade_curves
 from .effects import apply_gain, apply_eq, apply_3band_ramp, split_3band
+from .paths import default_render_path, resolve_tracks_dir
 
 
 def load_spec(spec_path):
-    """Load a mix spec JSON file.
+    """Load a mix spec JSON file, resolving its `tracks_dir` from the spec's location
+    (`paths.resolve_tracks_dir`) and remembering where the spec lives (`_spec_path`).
 
     Returns:
         dict: the parsed mix specification
     """
     with open(spec_path, "r") as f:
-        return json.load(f)
+        spec = json.load(f)
+    spec["_spec_path"] = os.path.abspath(spec_path)
+    spec["tracks_dir"] = resolve_tracks_dir(spec_path, spec.get("tracks_dir"),
+                                            [t["file"] for t in spec.get("tracks", [])])
+    return spec
 
 
 def prepare_track(track_spec, tracks_dir, target_sr):
@@ -709,7 +715,8 @@ def render_mix(spec, tracks_dir=None, output_path=None):
     if tracks_dir is None:
         tracks_dir = spec.get("tracks_dir", ".")
     if output_path is None:
-        output_path = spec.get("output_file", "output/mix.wav")
+        output_path = default_render_path(spec.get("_spec_path"),
+                                          os.path.basename(spec.get("output_file", "mix.wav")))
 
     sr = spec.get("sample_rate", 44100)
     tracks = spec["tracks"]
@@ -786,7 +793,7 @@ def render_transition(spec, transition_index, tracks_dir=None, output_path=None)
     if tracks_dir is None:
         tracks_dir = spec.get("tracks_dir", ".")
     if output_path is None:
-        output_path = f"output/transition_{transition_index}.wav"
+        output_path = default_render_path(spec.get("_spec_path"), f"transition_{transition_index}.wav")
 
     sr = spec.get("sample_rate", 44100)
     transition = spec["transitions"][transition_index]

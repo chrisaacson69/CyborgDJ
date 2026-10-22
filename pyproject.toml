@@ -1,0 +1,11 @@
+# CyborgDJ has no build config yet; this file holds the architecture contract only.
+
+[tool.importlinter]
+root_package = "cyborgdj"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Engine renders from grid results: no analysis code, no controller"
+type = "forbidden"
+source_modules = ["cyborgdj.engine"]
+forbidden_modules = ["librosa", "cyborgdj.cli"]

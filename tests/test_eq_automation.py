@@ -3,8 +3,8 @@
 import numpy as np
 import pytest
 
-from cyborgdj.crossfader import bars_to_samples
-from cyborgdj.engine import _build_lane_envelope, execute_transition
+from cyborgdj.engine.crossfader import bars_to_samples
+from cyborgdj.engine.mix import _build_lane_envelope, execute_transition
 
 
 SR = 44100
