@@ -104,7 +104,10 @@ Done, each step verified by the engine tests and a render oracle (4 transitions 
 3. **`spectral_terrain`** (`4507bdf`): repointed; its output matches the original's line for line.
 4. **Archive** (`458adf2`): superseded scripts moved to a local, gitignored `archive/<tool>/`; the project notes
    `scripts/EZ.txt` and `Loud.txt` moved to their projects.
-5. **Docs**: README, requirements (numpy, scipy, soundfile, pyrubberband), spec files read as UTF-8.
+5. **Docs**: README, requirements, spec files read as UTF-8.
+6. **Engine split out** (Chris: "the dependency issues are key here"): `cyborgdj/engine/` became the library
+   [dj-render](https://github.com/chrisaacson69/dj-render), so CyborgDJ is now a controller over dj-score and
+   dj-render, with the MCP layer to sit on top of both. Renders through the new package: byte-identical.
 
 Left, in order:
 - **Grid from the library.** Specs keep their hand-typed `original_bpm` and `first_beat_sample` until the renderer

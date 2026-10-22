@@ -3,12 +3,12 @@
 import argparse
 import sys
 
-from .engine import load_spec, render_mix, render_transition
+from dj_render import load_spec, render_mix, render_transition
 
 
 def analyze_tracks(spec, tracks_dir=None):
     """Load all tracks and report first-downbeat detection results."""
-    from .engine.loader import load_track, detect_first_downbeat, compute_bar_frames
+    from dj_render.loader import load_track, detect_first_downbeat, compute_bar_frames
     import os
     import sys
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')

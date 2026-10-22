@@ -7,12 +7,10 @@ spectra in the music library's analysis caches.
 import sys
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 import json
-import os
 import numpy as np
 from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cyborgdj.engine.paths import library_root  # noqa: E402
+from dj_render.paths import library_root  # noqa: E402
 
 SPEC_PATH = Path(sys.argv[1])
 CAMELOT_DIR = library_root(SPEC_PATH) / 'analysis'

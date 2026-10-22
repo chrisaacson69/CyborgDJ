@@ -16,7 +16,7 @@ Your mix lives in a JSON spec file. Change a bar number, re-render, listen, repe
 
 ```bash
 python -m venv .venv
-.venv/Scripts/pip install -r requirements.txt     # numpy, scipy, soundfile, pyrubberband
+.venv/Scripts/pip install -r requirements.txt     # the render library, dj-render (clone it beside this repo)
 ```
 
 **System dependency:** the [Rubber Band](https://breakfastquay.com/rubberband/) command-line tool must be on `PATH`
@@ -57,22 +57,15 @@ python scripts/spectral_terrain.py ../music/CyborgProjects/Preach/specs/dj-set-1
 
 ```
 cyborgdj/
-├── cyborgdj/
-│   ├── engine/          # the renderer: never imports analysis code (import-linter, pyproject.toml)
-│   │   ├── mix.py       # orchestrator: reads a spec, renders transitions and mixes
-│   │   ├── loader.py    # audio I/O (soundfile; ffmpeg for MP3), bar grid from tempo + first downbeat
-│   │   ├── stretcher.py # time-stretch via Rubber Band
-│   │   ├── crossfader.py
-│   │   ├── effects.py   # EQ, filters, gain (scipy)
-│   │   └── paths.py     # where a spec's tracks and renders live
-│   └── cli.py           # command-line interface
+├── cyborgdj/cli.py      # the controller's command line
 ├── scripts/             # controller-side tools (spectral_terrain, snap_cues_to_bars)
 ├── tests/
 └── AUDIT.md             # 2026-10-22 cleanup: what moved where, and why
 ```
 
-Analysis (beat grids, key, events, spectra, Rekordbox export) is the shared library
-[dj-score](https://github.com/chrisaacson69/dj-score); this repo renders.
+CyborgDJ is the **controller** over two libraries: [dj-score](https://github.com/chrisaacson69/dj-score) measures
+(beat grids, key, events, spectra, Rekordbox export) and [dj-render](https://github.com/chrisaacson69/dj-render)
+renders (stretch, EQ, crossfade, gain). It holds no analysis or rendering code of its own (`lint-imports`).
 
 ## The Mix Spec
 

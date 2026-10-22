@@ -5,7 +5,7 @@ root_package = "cyborgdj"
 include_external_packages = true
 
 [[tool.importlinter.contracts]]
-name = "Engine renders from grid results: no analysis code, no controller"
+name = "Controller: measuring is dj-score's job, rendering is dj-render's; no analysis code here"
 type = "forbidden"
-source_modules = ["cyborgdj.engine"]
-forbidden_modules = ["librosa", "cyborgdj.cli"]
+source_modules = ["cyborgdj"]
+forbidden_modules = ["librosa"]
