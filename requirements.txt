@@ -1,5 +1,4 @@
 numpy
+scipy
 soundfile
-librosa
 pyrubberband
-pedalboard

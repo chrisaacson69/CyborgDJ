@@ -32,14 +32,14 @@ the ear disagrees.
 | File | Loop | Verdict |
 |---|---|---|
 | `cyborgdj/engine.py`, `crossfader.py`, `effects.py`, `stretcher.py` | render | **keep** as the engine package |
-| `cyborgdj/loader.py` | render + analysis | **split**: audio I/O → dj-score `AudioLoader` (one decoder for every tool; ffmpeg runs here, only `ffprobe` is blocked); `detect_first_downbeat` + `compute_bar_frames` (the third grid) → the dj-score grid, read from the library; `trim_to_bars`, `bar_to_sample`, `apply_loop` stay (render operations on a given grid) |
+| `cyborgdj/loader.py` | render + analysis | **split**: audio I/O stays in the engine (*corrected:* moving it to dj-score's `AudioLoader` would pull librosa into the engine, against finding 3 below; ffmpeg runs here, only `ffprobe` is blocked); `detect_first_downbeat` + `compute_bar_frames` (the third grid) → the dj-score grid, read from the library; `trim_to_bars`, `bar_to_sample`, `apply_loop` stay (render operations on a given grid) |
 | `cyborgdj/cli.py` | render | **keep** the render CLI; its `analyze_tracks` report → `dj-score bpm --grid comb` |
 | `tests/test_eq_automation.py` | render | **keep** |
 | `scripts/spectral_collision.py` | plan | **retire** → `dj-score pair` (a fork) |
 | `scripts/analyze_track.py` | plan | **retire** → dj-score services (a hand rebuild of camelot's pipeline) |
 | `scripts/export_rekordbox.py` | plan | **retire** → `dj-score export`; unblocks archiving camelot's `rekordbox_export.py` |
 | `scripts/snap_cues_to_bars.py` | plan | **decide**: fold into `dj-score export` (cues on the bar grid) or retire once export uses the comb grid |
-| `spectral_terrain.py` | verify | **keep, repoint**: a controller report joining spec automation and spectra (crossover bar per transition); reads camelot's folders by absolute path today |
+| `spectral_terrain.py` | verify | **keep, repoint** (done): a controller report joining spec automation and spectra (crossover bar per transition). Caveat: it indexes camelot's cached spectra (DP-grid bars) by the spec's bar numbers (CyborgDJ's own grid), so its EARLY/LATE readings are only as good as the agreement between two grids; resolved when specs take their grid from the library |
 | `scripts/render_eq_1_2.py`, `render_eq_test.py` | tune | **move to the dj-set-1b project**: hand A/B sweeps of EQ automation, the precursors of the knob-sweep loop |
 | `analyze_btb_*.py` (6) | — | **archive**: one-off investigation of a vocal pattern in Below The Belt, bars 0–16 |
 | `reverse-engineer/dinka-giga-mix/*.py` | tune | **its own project** (below); `align_to_master.py` is already converted (dj-score `alignment`) |
@@ -93,3 +93,22 @@ sweep becomes a real consumer.
   rendered overlap (the *verify* loop).
 - **Fourth project:** Flip of the Coin / Warung / Quicksilver (`flip-quicksilver` v1–v7, `warung-flip` v0–v3).
   It started with some hard transitions and never got going.
+
+## Status (2026-10-22)
+
+Done, each step verified by the engine tests and a render oracle (4 transitions re-rendered byte-identical):
+
+1. **Data out** (`5545168`): 60 moves, nothing deleted; tracked files copied and compared before removal.
+2. **Engine package** (`61aae10`): `cyborgdj/engine/` behind an import-linter boundary (no librosa, no CLI;
+   a planted violation is caught); specs resolve tracks and renders from their own location.
+3. **`spectral_terrain`** (`4507bdf`): repointed; its output matches the original's line for line.
+4. **Archive** (`458adf2`): superseded scripts moved to a local, gitignored `archive/<tool>/`; the project notes
+   `scripts/EZ.txt` and `Loud.txt` moved to their projects.
+5. **Docs**: README, requirements (numpy, scipy, soundfile, pyrubberband), spec files read as UTF-8.
+
+Left, in order:
+- **Grid from the library.** Specs keep their hand-typed `original_bpm` and `first_beat_sample` until the renderer
+  can read the comb grid from `music/analysis/<track>/`. That changes renders, so it is gated on listening
+  (the Foss A/B was "a little cleaner") and on an objective verify step (kick alignment in the overlap).
+- **`snap_cues_to_bars`** folds into dj-score's export (approximate cues on the bar grid for the user to fine-tune).
+- **camelot's `rekordbox_export.py`** can now be archived: nothing live imports it.

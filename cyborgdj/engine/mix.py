@@ -20,7 +20,7 @@ def load_spec(spec_path):
     Returns:
         dict: the parsed mix specification
     """
-    with open(spec_path, "r") as f:
+    with open(spec_path, "r", encoding="utf-8") as f:
         spec = json.load(f)
     spec["_spec_path"] = os.path.abspath(spec_path)
     spec["tracks_dir"] = resolve_tracks_dir(spec_path, spec.get("tracks_dir"),

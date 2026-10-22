@@ -15,50 +15,64 @@ Your mix lives in a JSON spec file. Change a bar number, re-render, listen, repe
 ### Install
 
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
+.venv/Scripts/pip install -r requirements.txt     # numpy, scipy, soundfile, pyrubberband
 ```
 
-**System dependency:** The [Rubber Band Library](https://breakfastquay.com/rubberband/) must be installed for time-stretching.
+**System dependency:** the [Rubber Band](https://breakfastquay.com/rubberband/) command-line tool must be on `PATH`
+for time-stretching (pyrubberband calls it). On Windows, unzip the release (e.g. `rubberband-4.0.0-gpl-executable-windows`)
+and add its folder to `PATH`; on macOS `brew install rubberband`; on Linux `apt-get install rubberband-cli`.
+MP3 sources are decoded with `ffmpeg`, which must also be on `PATH`.
 
-- **Windows:** `pip install pyrubberband` includes pre-built binaries
-- **macOS:** `brew install rubberband`
-- **Linux:** `apt-get install rubberband-cli` or `apt-get install librubberband-dev`
+### Where things live
+
+Tracks and mix projects live in a **shared music library** outside this repo (commercial audio is never committed):
+
+```
+music/                              originals (mp3/wav), shared by every tool
+music/analysis/<track>/             each track's analysis (dj-score / camelot caches)
+music/CyborgProjects/<project>/     a mix project: specs/, renders/, notes
+```
+
+A spec finds its tracks from where the spec file lives (beside it, then the library root, then the project's
+`tracks/`), and renders go to the project's `renders/` folder, so you can run from any directory.
 
 ### Run
 
 ```bash
 # Render the full mix
-python -m cyborgdj.cli specs/dj-set-1.json --tracks-dir /path/to/your/tracks/
+python -m cyborgdj ../music/CyborgProjects/Preach/specs/dj-set-1b.json
 
 # Render just one transition for quick iteration
-python -m cyborgdj.cli specs/dj-set-1.json --transition 0 --tracks-dir /path/to/your/tracks/
+python -m cyborgdj ../music/CyborgProjects/Preach/specs/dj-set-1b.json --transition 0
 
 # List all transitions
-python -m cyborgdj.cli specs/dj-set-1.json --list-transitions
+python -m cyborgdj ../music/CyborgProjects/Preach/specs/dj-set-1b.json --list-transitions
+
+# Where each transition's energy crossover falls against its automation handoff
+python scripts/spectral_terrain.py ../music/CyborgProjects/Preach/specs/dj-set-1b.json
 ```
-
-### Output
-
-Rendered WAV files go to `output/` (gitignored).
 
 ## Project Structure
 
 ```
-CyborgDJ/
+cyborgdj/
 ├── cyborgdj/
-│   ├── __init__.py
-│   ├── loader.py        # Audio I/O, beat detection, bar grid computation
-│   ├── stretcher.py     # Time-stretch via pyrubberband (Rubber Band Library)
-│   ├── crossfader.py    # Crossfade math — fade curves, overlap mixing
-│   ├── effects.py       # EQ and gain via pedalboard (Spotify/JUCE)
-│   ├── engine.py        # Orchestrator — reads spec, coordinates everything
-│   └── cli.py           # Command-line interface
-├── specs/
-│   └── dj-set-1.json    # Mix spec for DJ Set 1 (the tunable parameters)
-├── output/              # Rendered audio (gitignored)
-├── requirements.txt
-└── README.md
+│   ├── engine/          # the renderer: never imports analysis code (import-linter, pyproject.toml)
+│   │   ├── mix.py       # orchestrator: reads a spec, renders transitions and mixes
+│   │   ├── loader.py    # audio I/O (soundfile; ffmpeg for MP3), bar grid from tempo + first downbeat
+│   │   ├── stretcher.py # time-stretch via Rubber Band
+│   │   ├── crossfader.py
+│   │   ├── effects.py   # EQ, filters, gain (scipy)
+│   │   └── paths.py     # where a spec's tracks and renders live
+│   └── cli.py           # command-line interface
+├── scripts/             # controller-side tools (spectral_terrain, snap_cues_to_bars)
+├── tests/
+└── AUDIT.md             # 2026-10-22 cleanup: what moved where, and why
 ```
+
+Analysis (beat grids, key, events, spectra, Rekordbox export) is the shared library
+[dj-score](https://github.com/chrisaacson69/dj-score); this repo renders.
 
 ## The Mix Spec
 
@@ -139,14 +153,13 @@ A single transition renders in seconds. The full 11-track set takes longer but y
 
 | Library | Role |
 |---------|------|
-| **soundfile** | Audio I/O (WAV, FLAC) |
-| **librosa** | Beat detection, BPM analysis |
-| **pyrubberband** | Time-stretching (Rubber Band Library) |
-| **pedalboard** | EQ, filtering, gain (Spotify, JUCE-based) |
+| **soundfile** (+ ffmpeg for MP3) | Audio I/O |
+| **pyrubberband** (Rubber Band CLI) | Time-stretching |
+| **scipy** | EQ, filtering, onset detection for the first downbeat |
 | **numpy** | Array math for mixing and crossfades |
 
 ## Related
 
 - Built for [DJ Set 1](https://github.com/chrisaacson69/Vault/blob/main/projects/dj-set-1/README.md) — 11-track progressive/trance mix
-- Analysis data from [Camelot From YouTube](https://github.com/chrisaacson69/camelot_from_youtube)
+- Analysis from [dj-score](https://github.com/chrisaacson69/dj-score) (the shared analysis library; formerly camelot_from_youtube)
 - Part of the [Set Mastering Pipeline](https://github.com/chrisaacson69/Vault/blob/main/projects/set-mastering/README.md)
