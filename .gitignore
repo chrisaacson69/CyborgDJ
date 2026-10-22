@@ -230,3 +230,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Local archive of retired tools (not published; history keeps the originals)
+archive/
+.import_linter_cache/
